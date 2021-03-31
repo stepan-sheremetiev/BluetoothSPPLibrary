@@ -397,7 +397,14 @@ public class BluetoothService {
                                             && arr_byte.get(2).byteValue() == 83
                                             && arr_byte.get(3).byteValue() == 85
                                             && arr_byte.get(4).byteValue() == 76
-                                            && arr_byte.get(5).byteValue() == 84)) {
+                                            && arr_byte.get(5).byteValue() == 84) ||
+                                    //DEVICE
+                                    (arr_byte.size() == 64 && arr_byte.get(0).byteValue() == 68
+                                            && arr_byte.get(1).byteValue() == 69
+                                            && arr_byte.get(2).byteValue() == 86
+                                            && arr_byte.get(3).byteValue() == 73
+                                            && arr_byte.get(4).byteValue() == 67
+                                            && arr_byte.get(5).byteValue() == 69)) {
                         buffer = new byte[arr_byte.size()];
                         for (int i = 0; i < arr_byte.size(); i++) {
                             buffer[i] = arr_byte.get(i).byteValue();
